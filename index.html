@@ -1,157 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #userinfo {
-            background-color: aquamarine;
-            margin: 10px;
-        }
-        #cinsiyetinfo {
-            background-color: salmon;
-            margin-bottom: 20px;
-        }
-        #buttoninfo {
-            background-color: seagreen;
-            border:5px groove cornflowerblue;
-            border-top-reight-radius: 10px;
-        }
-        #renkinfo {
-            background-color: steelblue;
-        }
-
-
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="img" href="img/icon.png">
+    <title>Google_homepage_project</title> 
 </head>
-<body>
-    <form action="" method="get"></form>
-    <h1>SIZI TANIYALIM</h1>
-    <!--input text password-->
-    <div id="userinfo">
-        <label for="username">   AD       :     </label>
-        <input type="text" name="username" placeholder="Adinizi giriniz....">
-        <br><br>
-        <label for="usersurname">SOYAD    : </label>
-        <input type="text" name="username" placeholder="SoyAdinizi giriniz....">
-        <br><br>
-        <label for="password">   PAROLA   : </label>
-        <input type="text" name="password" placeholder="Parolanizi giriniz....">
-        <hr>
-    </div>
-     <!--radio button-->
-     <div id="cinsiyetinfo">
-         <h3>CINSIYET</h3>
-     
-        <br>
-        <input type="radio" name ="cinsiyet" id="gender1">
-        <label for="gender1">erkek</label>
-        <br>
-        <input type="radio" name ="cinsiyet" id="gender2">
-        <label for="gender2">Bayan</label>
-     </div>
-        <br>
-      <!--checkbox-->
-      <div id="buttoninfo">
-          <h4>EN SEVDIGINIZ MEYVELER</h4>
-        
-        <br>
-        <input type="checkbox" name ="meyveler" id="elma" value="elma">
-        <label for="elma">elma</label>
-        <br>
-        <input type="checkbox" name ="meyveler" id="armut" value="armut">
-        <label for="armut">armut</label>
-        <br>
-        <input type="checkbox" name ="meyveler" id="muz" value="muz">
-        <label for="muz">muz</label>
-        <br>
-        <input type="checkbox" name ="meyveler" id="erik" value="erik">
-        <label for="erik">erik</label>
-        <br>
-        <input type="checkbox" name ="meyveler" id="kiraz" value="kiraz">
-        <label for="kiraz">kiraz</label>
-        <br>
-     </div>
-      <!--number-->
-      <div>
-        <h3>YASINIZI GIRINIZ</h3>
-        <br>
-        <label for="yas">YAS :</label>
-        <input type="number" name ="age" id="yas" min=1 max=125>
-        <br>
-    </div>
-     <!--search-->
-     <div>
-        <h3>KITAP ARA</h3>
-        <br>
-        <label for="ara">KITAP ARA :</label>
-        <input type="search" name ="search" id="ara" placeholder="Aranacak kelime">
-        <br>
-    </div>
- <!--search-->
- <div id="renkinfo">
-    <h3>SEVDIGINIZ RENK</h3>
-    <br>
-    <label for="color">SEVDIGINIZ RENK :</label>
-    <input type="color" name ="color" id="RENK" >
-    <br>
-</div>
-<!--email-->
-<div>
-    <h3><E-MAIL>email</E-MAIL></h3>
-    <br>
-    <label for="eposta">E Posta Adresiniz :</label>
-    <input type="email" name ="email" id="eposta" placeholder="example@example.com" >
-    <br>
-</div>
-<!--file-->
-<div>
-    <h3>File Dosya yükleme</h3>
-    <br>
-    <label for="dosya">Dosya yükleyiniz :</label>
-    <input type="file" name ="file" id="dosya" multiple>
-    <br>
-</div>
-<!--telefon-->
-<div>
-    <h3>TELEFON NUMARANIZI YAZINIZ</h3>
-    <br>
-    <label for="tel">Telefon numaranizi Yaziniz :</label>
-    <input type="tel" name ="phone" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" 
-    placeholder="xxx-xxx-xx-xx" maxlength="10">
-    <br>
-</div>
-<!--seleckt-->
-<div>
-    <h3>Hangi Tatliyi Seversiniz !!</h3>
-    <br>
-    <label for="dosya">Tatli seciniz :</label>
-     <select name="" id="">
-         <option value="sütlac">sütlac</option>
-         <option value="baklava">baklava</option>
-         <option value="puding">puding</option>
-     </select>
-    <br>
-</div>
-<!--date-->
-<div>
-    <h3>Dogum Tarihinizi Giriniz</h3>
-    <br>
-    <label for="dosya">dogum Tarihi seciniz :</label>
-     <input type="date" name="date" id="dogum" min="1900-01-01" max="2022-12-31" >
-    <br>
-</div>
-<!--reset-->
-<div>
-    <br>
-    <input type="reset">
-    <br><br><br>
-    <input type="submit">
 
-</div>
+<body>
+ 
+    <div id="nav">
+        <a href="#">Gmail</a>
+        <a href="#">Görseller</a>
+        <img src="menu.png" alt="Google uygulamalari">
+        <button class="button">Oturum Ac</button>
+    </div>
+    <div id="orta">
+        <h1 id="logo">Google</h1>
+    </div>  
+    <div id="ara">
+       
+        <input type="text">
+    </div>
+
+<footer>
+    <p>FOOTER</p>
+</footer> 
 </body>
 </html>
