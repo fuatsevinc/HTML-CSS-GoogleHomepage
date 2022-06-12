@@ -1,4 +1,5 @@
-Project-002 :Google Landing Page (HC-02)
+Google Landing Page 
+
 Description
 Project aims to create google landing page.
 
@@ -6,7 +7,7 @@ Problem Statement
 Your company has recently started on a project that aims to create a landing page. So you and your colleagues have started to work on the project.
 Project Skeleton
 002-google-landing-page (folder)
-|
+
 |----readme.md         # Given to the students (Definition of the project)          
 |----images            # Given to the students (Definition of the project)   
         |----appicon.png   
