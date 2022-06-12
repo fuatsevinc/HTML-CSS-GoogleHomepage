@@ -1,76 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/Google-favicon-2015.png" type="image/x-icon">
-    <link rel="stylesheet" href="style2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Landing Page</title>
-</head>
-<body>
-    <!-- header  -->
+    <style>
+        *{
+            /* margin: 0px; */
+            /* padding: 0px; */
+        }
+        .header ul{
+            list-style: none;
+            display: flex;
+            
+        }
+        .header li{
+            margin-right: 20px;
+        
+        }
+        .header a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, .8);
+        }
+        .header a:hover{
+            text-decoration: underline;
+        }
+        .header{
+            display: inline;
+            font-size: 0.8rem;
+            font-family: Arial, Helvetica, sans-serif ;
+            
+        }
+        .header-left{
+            float: left;
+            
+        }
+        .header-right{
+            float: right;
+        }
+        #signin{
+            background-color: #4285F4;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 1px 6px;
+            border: none;
+            border-radius: 2px;
+            height: 30px;
+            width: 70px;
+            position: relative;
+            top: -8px;
+        }
+        #signin:hover{
+            cursor: pointer;
+        }
+        #appicon img{
+            opacity: .5;
+            width: 30px;
+            position: relative;
+            top: -10px;
+        }
+        #appicon img:hover{
+            opacity: 1;
+        }
+        
+        .main{
+            
+            display:block;
+            position: absolute;
+            top: 27%;
+            left: 35%;
+            
+        }
+        .main-image{
+            text-align: center;
+        }
+        .main-image img{
+            width: 275px;
+        }
+        .main-searchbar input{
+            width:500px ;
+            height: 45px;
+            margin: 20px;
+            border: 0.5px solid;
+            border-radius:25px ;
+            padding-left: 25px;
+            border-color: rgba(0, 0, 0, .2);
+        }
+        .main-searchbar input:hover{
+            box-shadow: rgba(0, 0, 0, .2) 3px 3px 5px;
+        }
+        #glass{
+            width: 30px;
+            position: relative;
+            left: 70px;
+            top: 12px;
+        }
+        #mic{
+            width: 15px;
+            position: relative;
+            left: -60px;
+            top: 8px;
+        }
+        #glass:hover,
+        #mic:hover{
+            cursor: pointer;
+        }
+        .main-buttons{
+            text-align: center;
+            margin: 10px;
+            
+        }
 
-    <header class="header">
-        <ul class="header__left">
-            <li><a href="">About</a></li>
-            <li><a href="">Store</a></li>
-        </ul>
-        <ul class="header__right">
-            <li><a href="">Gmail</a></li>
-            <li><a href="">Images</a></li>
-            <li>
-                <img src="./img/appicon.png" alt="Application Icon" class="header__right--appicon">
-            </li>
-            <li>
-                <button class="header__right--button" type="button">Sign In</button>
-            </li>
-        </ul>
-    </header>
+        .main-buttons button {
+            color: rgba(0, 0, 0, .7);
+            font-size: 0.8rem;
+            margin-right: 15px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            
+        }
+        .main-buttons button:hover{
+            cursor: pointer;
+            color: rgba(0, 0, 0, 1);
+            /* border: 0.1px solid rgba(0, 0, 0, .4); */
+        }
+        .main-language{
+            text-align: center;
+            font-size: 0.8rem;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main-language a{
+            
+            color: darkblue;
+        }
+        .location{
+            color: rgba(0, 0, 0, .7);
+            font-size: 0.9rem;
+            margin-left: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1) ;
+            padding: 10px ;
 
-    <!-- main  -->
+            
 
-    <main class="main">
-        <img src="./img/googlelogo.png" alt="Logo" class="main__logo">
-        <div class="main__search-bar">
-            <img src="./img/magnifying_glass.jpg" alt="Magnifier" class="main__search-bar--magnifier">
-            <input type="search" class="main__search-bar--input">
-            <a href=""><img class="main__search-bar--microphone" src="./img/google_microphone.png" alt="microphone"></a>
-        </div>
+        }
 
-        <div class="main__buttons">
-            <button class="main__button--left">Google Search</button>
-            <button class="main__button--right">I'm Feeling Lucky</button>
-        </div>
-        <div>
-            <p class="main__language" >Other Languages you can use Google:  <a href="">English</a>
+        .footer{
+            background-color: #F2F2F2;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
 
-            </p>
-        </div>
+        }
+        .footer-link li{
+            list-style: none;
+            display: inline;
+            margin-right: 20px;
+        }
+        .footer-link{
+            /* border-bottom: 1px solid rgba(0, 0, 0, .1) ; */
+            
+        }
+        .footer-link a{
+            color: rgba(0, 0, 0, .7);
+            text-decoration: none;
+            
+        }
+        .footer-link a:hover{
+            text-decoration: underline;
+        }
+        .footer-link-left{
+            float: left;
+            margin-left: -25px;
+            /* border-top: 1px solid rgba(0, 0, 0, .1) ; */
+        }
+        .footer-link-right{
+            float: right;
+            margin-right: 30px;
+        }
 
-    </main>
 
-    <footer class="footer">
-
-        <div class="footer__country">Turkey</div>
-
-        <div class="footer__bottom">
-            <ul class="footer__bottom--left">
-                <li><a href="">Advertising</a></li>
-                <li><a href="">Business</a></li>
-                <li><a href="">How Search Works</a></li>
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left"><ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Store</a></li>
+      </ul></div>
+      <div class="header-right"><ul>
+          <li><a href="index.html">Gmail</a> </li>
+          <li><a href="index.html">Images</a> </li>
+          <li id="appicon"><a href="index.html"><img src="images/appicon.png" alt=""></a></li>
+          <li><a href="index.html"><button id="signin">Sign In</button></a></li> 
+      </ul></div>
+    </div>
+    <div class="main">
+      <div class="main-image"><img src="images/googlelogo.png" alt=""></div>
+      <div class="main-searchbar"><img id="glass" src="images/magnifying_glass.jpg" alt=""><input type="search" name="" id=""><img id="mic" src="images/google_microphone.png" alt=""></div>
+      <div class="main-buttons"><a href="index.html"><button>Google Search</button></a><a href="index.html"><button>I'm Feeling Lucky</button></a></div>
+      <div class="main-language"><p>Other Languages you can use Google: <a href="index.html">English</a></p></div>
+    </div>
+    <div class="footer">
+        <div class="location">Turkey</div>
+        <div class="footer-link">
+            <div class="footer-link-left">
+                <ul>
+                <li><a href="index.html">Advertising</a></li>
+                <li><a href="index.html">Business</a></li>
+                <li><a href="index.html">How Search Works</a></li>
             </ul>
-            <ul class="footer__bottom--right">
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Terms</a></li>
-                <li><a href="">Settings</a></li>
-            </ul>
         </div>
-
-    </footer>
-
-
-    
-
-</body>
+            <div class="footer-link-right"><ul>
+                <li><a href="index.html">Privacy</a></li>
+                <li><a href="index.html">Terms</a></li>
+                <li><a href="index.html">Settings</a></li>
+            </ul></div>
+        </div>
+    </div>
+  </body>
 </html>
